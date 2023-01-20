@@ -93,14 +93,14 @@
 # записанных на новой строчке каждое. Здесь каждое число – это масса соответствующего арбуза.
 # Все числа натуральные и не превышают 3000
 # 5 -> 5 1 6 5 9
-n = int(input()) # количество арбузов
-max = -1
-min = 3001
-for i in range(n):
-    x = int(input())
-    if x > max:
-        max = x
-    if x < min:
-        min = x
-print('max=',max)
-print('min=',min)
+# n = int(input()) # количество арбузов
+# max = -1
+# min = 3001
+# for i in range(n):
+#     x = int(input())
+#     if x > max:
+#         max = x
+#     if x < min:
+#         min = x
+# print('max=',max)
+# print('min=',min)
