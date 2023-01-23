@@ -11,20 +11,36 @@
 # Будем считать, что на вход подается только одно слово, которое содержит либо только английские, 
 # либо только русские буквы.
 
-scores = {
-1: ['А', 'В', 'Е', 'И', 'Н', 'О', 'Р', 'С', 'Т'], 
-2: ['Д', 'К', 'Л', 'М', 'П', 'У'], 
-3: ['Б', 'Г', 'Ё', 'Ь', 'Я'],
-4: ['Й', 'Ы'],
-5: ['Ж', 'З', 'Х', 'Ц', 'Ч'],
-8: ['Ш', 'Э', 'Ю' ],
-10: ['Ф', 'Щ', 'Ъ']
-}
+# scores = {
+# 1: ['А', 'В', 'Е', 'И', 'Н', 'О', 'Р', 'С', 'Т'], 
+# 2: ['Д', 'К', 'Л', 'М', 'П', 'У'], 
+# 3: ['Б', 'Г', 'Ё', 'Ь', 'Я'],
+# 4: ['Й', 'Ы'],
+# 5: ['Ж', 'З', 'Х', 'Ц', 'Ч'],
+# 8: ['Ш', 'Э', 'Ю' ],
+# 10: ['Ф', 'Щ', 'Ъ']
+# }
 
-word = str(input("Введите слово: ")).upper()
-res = 0
+# word = str(input("Введите слово: ")).upper()
+# res = 0
+# for i in word:
+#     for k, v in scores.items():
+#         if i in v:
+#             res += k
+# print(res)
+
+points_en = {1: 'AEIOULNSTR', 2: 'DG', 3: 'BCMP', 4: 'FHVWY', 5: 'K', 8: 'JZ', 10: 'QZ'}
+points_ru = {1: 'АВЕИНОРСТ', 2: 'ДКЛМПУ', 3: 'БГЁЬЯ', 4: 'ЙЫ', 5: 'ЖЗХЦЧ', 8: 'ШЭЮ', 10: 'ФЩЪ'}
+
+word = input().upper()
+count = 0
 for i in word:
-    for k, v in scores.items():
-        if i in v:
-            res += k
-print(res)
+    if i in 'QWERTYUIOPASDFGHJKLZXCVBNM':
+        for j in points_en:
+            if i in points_en[j]:
+                count += j
+else:
+    for j in points_ru:
+        if i in points_ru[j]:
+            count += j
+print(count)
