@@ -324,11 +324,11 @@
 # Input: 2 -> 3 4
 # Output: 4 3
 
-def f(n):
-    if n==0:
-        return ''
-    k=int(input())
-    return f(n-1)+f' {str(k)}'
+# def f(n):
+#     if n==0:
+#         return ''
+#     k=int(input())
+#     return f(n-1)+f' {str(k)}'
 
-n = int(input('введите число n '))
-print(f(n))
+# n = int(input('введите число n '))
+# print(f(n))
