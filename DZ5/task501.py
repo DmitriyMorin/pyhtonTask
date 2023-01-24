@@ -3,12 +3,11 @@
 # A = 3; B = 5 -> 243 (3⁵)
 # A = 2; B = 3 -> 8
 
-def pown(n, m):
+def exp(n, m):
     if m == 1:
         return 1
-    else:
-        return pow(n, m-1) * n
+    return pow(n, m-1) * n
 
 n = int(input('введите число n ')) 
 m = int(input('введите число m '))  
-print(pown(n, m))
+print(exp(n, m))
